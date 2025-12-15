@@ -7,27 +7,35 @@
         body {
             margin: 0;
             background-color: rgb(176, 95, 97);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
-        /* Make the page 700px wide, centered */
+
         .container {
             width: 700px;
             margin: 4em auto;
-        }
-        /* Use a nice font */
-        body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
         h1 {
             text-align: center;
             font-size: 3em;
-            margin: 2em 0;
+            margin: 0 0 1em 0;
+        }
+
+        h3, p {
+            text-align: center;
         }
 
         .graphic {
-    width: 100%;
-    margin: 2em auto;
-}
+            margin-top: 3em;
+        }
+
+        .graphic iframe {
+            width: 80%;
+            height: 700px;
+            display: block;
+            margin: 0 auto;
+            border: none;
+        }
 
         #footer {
             text-align: center;
@@ -38,23 +46,31 @@
     </style>
 </head>
 <body>
-<div class="graphic">
-  <iframe
-    title="Ongoing Internet Shutdowns"
-    aria-label="Choropleth map"
-    id="datawrapper-chart-pChQc"
-    src="https://datawrapper.dwcdn.net/pChQc/1/"
-    scrolling="no"
-    frameborder="0"
-    style="border: none; width: 80%; height: 700px; display: block; margin: 0 auto;"
-    data-external="1">
-  </iframe>
+
+<div class="container">
+    <h1>🌐 The Internet Shutdown Tracker ⛔</h1>
+    <h3>Ongoing internet shutdowns, tracked by duration and country</h3>
+    <p>
+        The map below auto-updates every hour. Data from
+        <a href="https://pulse.internetsociety.org/en/shutdowns/">Internet Society Pulse</a>.
+    </p>
+
+    <div class="graphic">
+        <iframe
+          title="Ongoing Internet Shutdowns"
+          aria-label="Choropleth map"
+          id="datawrapper-chart-pChQc"
+          src="https://datawrapper.dwcdn.net/pChQc/1/"
+          scrolling="no"
+          frameborder="0"
+          data-external="1">
+        </iframe>
+    </div>
 </div>
 
+<div id="footer">
+    <p>This website was made for a tutorial on <a href="https://jonathansoma.com">auto-updating websites</a>.</p>
 </div>
 
-    </div>
-    <div id="footer">
-        <p>This website was made for a tutorial on <a href="https://jonathansoma.com">auto-updating websites</a>.</p>
-    </div>
+</body>
 </html>
